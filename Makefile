@@ -32,6 +32,13 @@ SRCS = ./src/main.c \
 	./src/mx_strndup.c \
 	./src/mx_strncpy.c \
 	./src/mx_strcat.c \
+	./src/mx_strstr.c \
+	./src/mx_get_substr_index.c \
+	./src/mx_count_substr.c \
+	./src/mx_count_words.c \
+	./src/mx_strtrim.c \
+	./src/mx_del_extra_spaces.c \
+	./src/mx_strsplit.c \
 
 CTMP = 	main.c \
 	mx_printchar.c \
@@ -61,6 +68,13 @@ CTMP = 	main.c \
 	mx_strndup.c \
 	mx_strncpy.c \
 	mx_strcat.c \
+	mx_strstr.c \
+	mx_get_substr_index.c \
+	mx_count_substr.c \
+	mx_count_words.c \
+	mx_strtrim.c \
+	mx_del_extra_spaces.c \
+	mx_strsplit.c \
 
 DFLAGS = -fsanitize=address -g
 CFLSGS = -std=c11 -Wall -Wextra -Wpedantic -Werror

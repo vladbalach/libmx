@@ -3,6 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char **mx_strsplit(const char *s, char c);
+char *mx_del_extra_spaces(const char *str);
+char *mx_strtrim(const char *str);
+int mx_count_words(const char *str, char c);
+int mx_count_substr(const char *str, const char *sub);
+int mx_get_substr_index(const char *str, const char *sub);
+char *mx_strstr(const char *haystack, const char *needle);
 char *mx_strcat(char *restrict s1, const char *restrict s2);
 char *mx_strncpy(char *dst, const char *src, int len);
 char *mx_strndup(const char *s1, size_t n);

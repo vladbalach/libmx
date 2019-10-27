@@ -1,4 +1,5 @@
-#include <stdlib.h>
+#include "header.h"
+
 char *mx_strnew(const int size) {
     if(size < 0) return 0;
     char *str =(char*) malloc ((sizeof(char))*(size + 1));
