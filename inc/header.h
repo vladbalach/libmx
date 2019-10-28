@@ -4,6 +4,15 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
+typedef struct s_list {
+void *data;
+struct s_list *next;
+} t_list;
+
+void mx_push_back(t_list **list, void *data);
+void mx_push_front(t_list **list, void *data);
+t_list *mx_create_node(void *data);
+
 void *mx_realloc(void *ptr, size_t size);
 void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
