@@ -4,6 +4,11 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
+int mx_memcmp(const void *s1, const void *s2, size_t n);
+void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void *mx_memset(void *b, int c, size_t len);
+char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 int mx_read_line(char **lineptr, int buf_size, int delim, const int fd);
 char *mx_file_to_str(const char *file);
 char *mx_strjoin(const char *s1, const char *s2);

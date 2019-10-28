@@ -42,6 +42,11 @@ SRCS = ./src/main.c \
 	./src/mx_strjoin.c \
 	./src/mx_file_to_str.c \
 	./src/mx_read_line.c \
+	./src/mx_replace_substr.c \
+	./src/mx_memset.c \
+	./src/mx_memcpy.c \
+	./src/mx_memccpy.c \
+	./src/mx_memcmp.c \
 
 CTMP = 	main.c \
 	mx_printchar.c \
@@ -81,6 +86,11 @@ CTMP = 	main.c \
 	mx_strjoin.c \
 	mx_file_to_str.c \
 	mx_read_line.c \
+	mx_replace_substr.c \
+	mx_memset.c \
+	mx_memcpy.c \
+	mx_memccpy.c \
+	mx_memcmp.c \
 
 DFLAGS = -fsanitize=address -g
 CFLSGS = -std=c11 -Wall -Wextra -Wpedantic -Werror

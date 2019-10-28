@@ -3,8 +3,9 @@
 int mx_get_substr_index(const char *str, const char *sub) {
     int i = 0;
     int j = 0;
-    if ((str == 0) || (sub == 0)) return -2;
-    if (mx_strlen(sub) == 0) return 0;
+
+    if ((str == 0) || (sub == 0)) return -2;//ERROR
+    if (mx_strlen(sub) == 0) return 0;//EMPTY STR
     while (str[i]) {
         j = i;
         while (str[j] == sub[j - i]) {
@@ -13,5 +14,5 @@ int mx_get_substr_index(const char *str, const char *sub) {
         }
         i++;
     }
-    return -1;
+    return -1;//NOT FIND
 }
