@@ -47,6 +47,11 @@ SRCS = ./src/main.c \
 	./src/mx_memcpy.c \
 	./src/mx_memccpy.c \
 	./src/mx_memcmp.c \
+	./src/mx_memchr.c \
+	./src/mx_memrchr.c \
+	./src/mx_memmem.c \
+	./src/mx_memmove.c \
+	./src/mx_realloc.c \
 
 CTMP = 	main.c \
 	mx_printchar.c \
@@ -91,6 +96,11 @@ CTMP = 	main.c \
 	mx_memcpy.c \
 	mx_memccpy.c \
 	mx_memcmp.c \
+	mx_memchr.c \
+	mx_memrchr.c \
+	mx_memmem.c \
+	mx_memmove.c \
+	mx_realloc.c \
 
 DFLAGS = -fsanitize=address -g
 CFLSGS = -std=c11 -Wall -Wextra -Wpedantic -Werror
