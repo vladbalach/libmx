@@ -5,43 +5,57 @@
 //     *el2 = tmp;
 // }
 
-
-// int mx_quicksort_(int *arr, int left, int right) {
+// static void swapInt(int *a, int *b) {
+//     int tmp = *a;
+//     *a = *b;
+//     *b = tmp;
+// }
+// int mx_quicksort(char **arr, int left, int right) {
 //   int l = left;
 //   int r = right;
-//   int p = arr[left + (right - left) / 2];
-
+//   int p = mx_strlen(arr[left + (right - left) / 2]);
+//   int count = 0;
 //   while (l <= r) {
-//     while(arr[l] < p)
-//       l++;
-//     while(arr[r] > p)
-//       r++;
+//     for(;p > mx_strlen(arr[l]);++l);
+//     for(;p < mx_strlen(arr[r]);--r);
 //     if(l <= r) {
-//       swap(arr[l], arr[r]);
+//         if((l != r) && (mx_strlen(arr[l]) != mx_strlen(arr[r]))) {
+//         swap(&arr[l], &arr[r]);
+//         count++;
+//         }
 //       l++;
 //       r--;
 //     }
 //   }
+//   if (l < right) count += mx_quicksort(arr, l, right);
+//   if (r > left) count += mx_quicksort(arr, left, r);
+//     return count;
+// }
 
 
+// int mx_quicksortINT(int *arr, int left, int right) {
+//     int p = arr[left];
+//     int l = left;
+//     int r = right;
+//     int count  = 0;
+//     while (l < r) {
+//         while(l < r) {
+//             if (p > arr[l]) l++;
+//             else break;
+//         }
+//         while(l < r) {
+//             if (p <= arr[r]) r--;//OK
+//             else break;
+//         }
+//         if (arr[l] != arr[r]) {
+//             swapInt(&arr[l],&arr[r]);
+//             count++;
+//             }
 
-
-//   //   int l = left, r = right;
-//   // int piv = mx_strlen(arr[(l + r) / 2]); // Опорным элементом для примера возьмём средний
-//   // int count = 0;
-//   // while (l <= r)
-//   // {
-//   //   while (mx_strlen(arr[l]) < piv)
-//   //     l++;
-//   //   while (mx_strlen(arr[r]) > piv)
-//   //     r--;
-//   //   if (l <= r)
-//   //     swap (&arr[l++], &arr[r--]);
-//   //     count++;
-//   // }
-//   // if (left < r)
-//   //   count += mx_quicksort (arr,left, r);
-//   // if (right > l)
-//   //   count += mx_quicksort (arr,l, right);
-//   //   return count;
+//             r--;
+//             l++;
+//     }
+//     if (l < right) count += mx_quicksortINT(arr, l, right);
+//     if (left < r) count += mx_quicksortINT(arr, left, right);
+//     return 0;
 // }

@@ -6,9 +6,9 @@ char **mx_strsplit(const char *s, char c) {
 
     char **str = (char **)malloc(sizeof(char**) * 
                         mx_count_words(s,c) + 1);
-    int iStartWord = 0;
-    int iEndWord = 0;
-    int iWord = 0;
+    int iStartWord  = 0;
+    int iEndWord    = 0;
+    int iWord       = 0;
 
     while(s[iStartWord]) {
         while(s[iStartWord] == c)
@@ -22,7 +22,7 @@ char **mx_strsplit(const char *s, char c) {
         iWord++;
         iStartWord = iEndWord;
     }
-    
+
     str[iWord] = 0;
     return str;
 }

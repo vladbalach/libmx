@@ -3,15 +3,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <stdbool.h>
 
 typedef struct s_list {
 void *data;
 struct s_list *next;
 } t_list;
 
+int mx_quicksortINT(int *arr, int left, int right);
+
+
+t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
+int mx_list_size(t_list *list);
+void mx_pop_back(t_list **head);
+void mx_pop_front(t_list **head);
 void mx_push_back(t_list **list, void *data);
 void mx_push_front(t_list **list, void *data);
 t_list *mx_create_node(void *data);
+
+
+
 
 void *mx_realloc(void *ptr, size_t size);
 void *mx_memmove(void *dst, const void *src, size_t len);

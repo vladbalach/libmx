@@ -54,6 +54,11 @@ SRCS = ./src/main.c \
 	./src/mx_realloc.c \
 	./src/mx_create_node.c \
 	./src/mx_push_front.c \
+	./src/mx_push_back.c \
+	./src/mx_pop_front.c \
+	./src/mx_pop_back.c \
+	./src/mx_list_size.c \
+	./src/mx_sort_list.c \
 
 CTMP = 	main.c \
 	mx_printchar.c \
@@ -105,11 +110,17 @@ CTMP = 	main.c \
 	mx_realloc.c \
 	mx_create_node.c \
 	mx_push_front.c \
+	mx_push_back.c \
+	mx_pop_front.c \
+	mx_pop_back.c \
+	mx_list_size.c \
+	mx_sort_list.c \
 
 DFLAGS = -fsanitize=address -g
 CFLSGS = -std=c11 -Wall -Wextra -Wpedantic -Werror
 
 all: install uninstall
+	@./libmx
 
 debug:
 	@cp $(SRCS) .
