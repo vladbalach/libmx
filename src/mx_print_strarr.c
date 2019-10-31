@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 void mx_print_strarr(char **arr, const char *delim) {
     if((arr == 0) || (delim == 0)) return;

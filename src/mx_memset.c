@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 void *mx_memset(void *b, int c, size_t len) {
     unsigned char *str = (unsigned char*) b;

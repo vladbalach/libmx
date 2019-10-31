@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 char *mx_strdup(const char *str)
 {

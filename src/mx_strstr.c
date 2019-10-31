@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 char *mx_strstr(const char *haystack, const char *needle) {
     int i = 0;

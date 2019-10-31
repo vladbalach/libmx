@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 static void printOneCase(int num, int headA, int headB, int I) {
     char  ch = 0;

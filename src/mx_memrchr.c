@@ -1,4 +1,4 @@
-#include "header.h"
+#include "libmx.h"
 
 void *mx_memrchr(const void *s, int c, size_t n) {
     unsigned char* s_ = (unsigned char*) s;
